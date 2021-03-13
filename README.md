@@ -17,7 +17,7 @@ Team Members:
 
 SQL Database<br>
 Tableau<br>
-Heroku app<br>
+Tablea Public<br>
 
 Machine Learning - Models
 
