@@ -25,9 +25,10 @@ Machine Learning - Models
 * Lasso Regression or Ridge Regression
 * KNN Model
 
-Possible Visulaizations <br>
+## Possible Visulaizations <br>
+
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)<br>
 
-## Interactive Dashboard
+## Interactive Dashboard <br>
 
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Tableau.PNG)
