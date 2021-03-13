@@ -15,9 +15,10 @@ Team Members:
 
 ## Requirements
 
-SQL Database
-Tableau
-Heroku
+SQL Database<br>
+Tableau<br>
+Heroku app<br>
+
 Machine Learning - Models
 
 * Random Forest
