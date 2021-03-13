@@ -27,4 +27,4 @@ Machine Learning - Models
 
 Possible Visulaizations <br>
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)
-![Image](https://cdn-images-1.medium.com/max/800/1*Uzc4r2LbTh5Kmt2i8qeyFw.png)
+![Image](https://miro.medium.com/max/875/1*MY8XbKDVnCcHZ59Iq-1fuA.png)
