@@ -26,5 +26,9 @@ Machine Learning - Models
 * KNN Model
 
 Possible Visulaizations <br>
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)
-![Image](https://cdn-images-1.medium.com/max/800/1*Uzc4r2LbTh5Kmt2i8qeyFw.png)
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)<br>
+![Image](https://cdn-images-1.medium.com/max/800/1*Uzc4r2LbTh5Kmt2i8qeyFw.png)<br>
+
+## Interactive Dashboard
+
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Tableau.PNG)
