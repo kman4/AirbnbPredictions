@@ -27,4 +27,4 @@ Machine Learning - Models
 
 Possible Visulaizations <br>
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)
-![Image](https://datahack.analyticsvidhya.com/contest/data-science-blogathon-6/?utm_source=blog&utm_medium=popup)
+![Image](https://cdn-images-1.medium.com/max/800/1*Uzc4r2LbTh5Kmt2i8qeyFw.png)
