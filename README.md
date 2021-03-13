@@ -1,4 +1,4 @@
-# AirbnbPredictions
+# Airbnb Price Predictions
 
 ![Image](https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.newyorkhotels.org%2F%2Fimg_new%2Ftop_banner2.png)
 
@@ -15,12 +15,16 @@ Team Members:
 
 ## Requirements
 
-SQL Database
-Tableau
-Heroku
+SQL Database<br>
+Tableau<br>
+Tablea Public<br>
+
 Machine Learning - Models
 
 * Random Forest
 * Lasso Regression or Ridge Regression
 * KNN Model
 
+Possible Visulaizations <br>
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)
+![Image](https://miro.medium.com/max/875/1*MY8XbKDVnCcHZ59Iq-1fuA.png)
