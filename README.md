@@ -28,4 +28,6 @@ Machine Learning - Models
 Possible Visulaizations <br>
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)<br>
 
+Interactive Dashboard
+
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Tableau.PNG)
