@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0217.1203                               -->
+<workbook source-build='2020.4.2 (20204.21.0217.1203)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='listing_master+ (ablekwsj)' inline='true' name='federated.0zege921w4sea8195je130wvgrw5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ziggy.db.elephantsql.com' name='postgres.03gq8200yf8iog15rf9cq0ozcw7w'>
+            <connection authentication='username-password' class='postgres' dbname='ablekwsj' one-time-sql='' port='5432' server='ziggy.db.elephantsql.com' sslmode='require' username='ablekwsj' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='boroughs_id' table='[public].[boroughs_id]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='listing_master' table='[public].[listing_master]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='MM/dd/yyyy' name='host_since' />
+            </columns>
+          </relation>
+          <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='boroughs_id' table='[public].[boroughs_id]' type='table' />
+          <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='neighbourhood_id' table='[public].[neighbourhood_id]' type='table' />
+          <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='roomtype_id' table='[public].[roomtype_id]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[accommodates]' value='[listing_master].[accommodates]' />
+          <map key='[amenities]' value='[listing_master].[amenities]' />
+          <map key='[availability_30]' value='[listing_master].[availability_30]' />
+          <map key='[availability_365]' value='[listing_master].[availability_365]' />
+          <map key='[availability_60]' value='[listing_master].[availability_60]' />
+          <map key='[availability_90]' value='[listing_master].[availability_90]' />
+          <map key='[bathrooms_text]' value='[listing_master].[bathrooms_text]' />
+          <map key='[bedrooms]' value='[listing_master].[bedrooms]' />
+          <map key='[beds]' value='[listing_master].[beds]' />
+          <map key='[borough]' value='[boroughs_id].[borough]' />
+          <map key='[borough_id (boroughs_id)]' value='[boroughs_id].[borough_id]' />
+          <map key='[borough_id (neighbourhood_id)]' value='[neighbourhood_id].[borough_id]' />
+          <map key='[borough_id]' value='[listing_master].[borough_id]' />
+          <map key='[description]' value='[listing_master].[description]' />
+          <map key='[host_acceptance_rate]' value='[listing_master].[host_acceptance_rate]' />
+          <map key='[host_identity_verified]' value='[listing_master].[host_identity_verified]' />
+          <map key='[host_listings_count]' value='[listing_master].[host_listings_count]' />
+          <map key='[host_response_rate]' value='[listing_master].[host_response_rate]' />
+          <map key='[host_response_time]' value='[listing_master].[host_response_time]' />
+          <map key='[host_since]' value='[listing_master].[host_since]' />
+          <map key='[hostid]' value='[listing_master].[hostid]' />
+          <map key='[id]' value='[listing_master].[id]' />
+          <map key='[instant_bookable]' value='[listing_master].[instant_bookable]' />
+          <map key='[latitude]' value='[listing_master].[latitude]' />
+          <map key='[listing_url]' value='[listing_master].[listing_url]' />
+          <map key='[longitude]' value='[listing_master].[longitude]' />
+          <map key='[maximum_nights]' value='[listing_master].[maximum_nights]' />
+          <map key='[minimum_nights]' value='[listing_master].[minimum_nights]' />
+          <map key='[name]' value='[listing_master].[name]' />
+          <map key='[neighbourhood]' value='[neighbourhood_id].[neighbourhood]' />
+          <map key='[neighbourhoodid (neighbourhood_id)]' value='[neighbourhood_id].[neighbourhoodid]' />
+          <map key='[neighbourhoodid]' value='[listing_master].[neighbourhoodid]' />
+          <map key='[number_of_reviews]' value='[listing_master].[number_of_reviews]' />
+          <map key='[picture_url]' value='[listing_master].[picture_url]' />
+          <map key='[price]' value='[listing_master].[price]' />
+          <map key='[review_scores_accuracy]' value='[listing_master].[review_scores_accuracy]' />
+          <map key='[review_scores_cleanliness]' value='[listing_master].[review_scores_cleanliness]' />
+          <map key='[review_scores_communication]' value='[listing_master].[review_scores_communication]' />
+          <map key='[review_scores_location]' value='[listing_master].[review_scores_location]' />
+          <map key='[review_scores_rating]' value='[listing_master].[review_scores_rating]' />
+          <map key='[review_scores_value]' value='[listing_master].[review_scores_value]' />
+          <map key='[room_type]' value='[roomtype_id].[room_type]' />
+          <map key='[room_typeid (roomtype_id)]' value='[roomtype_id].[room_typeid]' />
+          <map key='[room_typeid]' value='[listing_master].[room_typeid]' />
+          <map key='[superhost]' value='[listing_master].[superhost]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listing_url]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>listing_url</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>picture_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[picture_url]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>picture_url</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hostid</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[hostid]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>hostid</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_since</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[host_since]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_since</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_response_time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_response_time]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_response_time</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_response_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[host_response_rate]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_response_rate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_acceptance_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[host_acceptance_rate]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_acceptance_rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>superhost</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[superhost]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>superhost</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_listings_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[host_listings_count]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_listings_count</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_identity_verified</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[host_identity_verified]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>host_identity_verified</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhoodid</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[neighbourhoodid]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>neighbourhoodid</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>borough_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[borough_id]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>borough_id</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_typeid</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[room_typeid]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>room_typeid</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accommodates</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[accommodates]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>accommodates</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bathrooms_text]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>bathrooms_text</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[beds]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>beds</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amenities</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amenities]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>amenities</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minimum_nights</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[minimum_nights]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>minimum_nights</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maximum_nights</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[maximum_nights]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>maximum_nights</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_30</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[availability_30]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>availability_30</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_60</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[availability_60]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>availability_60</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_90</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[availability_90]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>availability_90</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_365</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[availability_365]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>availability_365</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_reviews</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[number_of_reviews]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>number_of_reviews</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_rating</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_rating]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_rating</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_accuracy</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_accuracy]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_accuracy</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_cleanliness</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_cleanliness]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_cleanliness</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_communication</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_communication]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_communication</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_location</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_location]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_location</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_value</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_scores_value]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>review_scores_value</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instant_bookable</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[instant_bookable]</local-name>
+            <parent-name>[listing_master]</parent-name>
+            <remote-alias>instant_bookable</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>borough_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[borough_id (boroughs_id)]</local-name>
+            <parent-name>[boroughs_id]</parent-name>
+            <remote-alias>borough_id</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[boroughs_id_3DA0712BB0AC4DA38D23AEF5954F08BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>borough</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[borough]</local-name>
+            <parent-name>[boroughs_id]</parent-name>
+            <remote-alias>borough</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[boroughs_id_3DA0712BB0AC4DA38D23AEF5954F08BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhoodid</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[neighbourhoodid (neighbourhood_id)]</local-name>
+            <parent-name>[neighbourhood_id]</parent-name>
+            <remote-alias>neighbourhoodid</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[neighbourhood_id]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>borough_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[borough_id (neighbourhood_id)]</local-name>
+            <parent-name>[neighbourhood_id]</parent-name>
+            <remote-alias>borough_id</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_typeid</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[room_typeid (roomtype_id)]</local-name>
+            <parent-name>[roomtype_id]</parent-name>
+            <remote-alias>room_typeid</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[roomtype_id_EEDD57BA07DB44C799546162A14D22AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[room_type]</local-name>
+            <parent-name>[roomtype_id]</parent-name>
+            <remote-alias>room_type</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[roomtype_id_EEDD57BA07DB44C799546162A14D22AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='boroughs_id' datatype='table' name='[__tableau_internal_object_id__].[boroughs_id_3DA0712BB0AC4DA38D23AEF5954F08BF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='listing_master' datatype='table' name='[__tableau_internal_object_id__].[listing_master_C4E3E48F707C4F14B99EB897F897DB7E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='neighbourhood_id' datatype='table' name='[__tableau_internal_object_id__].[neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='roomtype_id' datatype='table' name='[__tableau_internal_object_id__].[roomtype_id_EEDD57BA07DB44C799546162A14D22AD]' role='measure' type='quantitative' />
+      <column caption='Accommodates' datatype='integer' name='[accommodates]' role='measure' type='quantitative' />
+      <column caption='Amenities' datatype='string' name='[amenities]' role='dimension' type='nominal' />
+      <column caption='Availability 30' datatype='integer' name='[availability_30]' role='measure' type='quantitative' />
+      <column caption='Availability 365' datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+      <column caption='Availability 60' datatype='integer' name='[availability_60]' role='measure' type='quantitative' />
+      <column caption='Availability 90' datatype='integer' name='[availability_90]' role='measure' type='quantitative' />
+      <column caption='Bathrooms Text' datatype='string' name='[bathrooms_text]' role='dimension' type='nominal' />
+      <column caption='Bedrooms' datatype='integer' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Beds' datatype='integer' name='[beds]' role='measure' type='quantitative' />
+      <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+      <column caption='Borough Id (Boroughs Id)' datatype='integer' name='[borough_id (boroughs_id)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Borough Id' datatype='integer' name='[borough_id]' role='dimension' type='ordinal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Host Acceptance Rate' datatype='real' name='[host_acceptance_rate]' role='measure' type='quantitative' />
+      <column caption='Host Identity Verified' datatype='boolean' name='[host_identity_verified]' role='dimension' type='nominal' />
+      <column caption='Host Listings Count' datatype='integer' name='[host_listings_count]' role='measure' type='quantitative' />
+      <column caption='Host Response Rate' datatype='real' name='[host_response_rate]' role='measure' type='quantitative' />
+      <column caption='Host Response Time' datatype='string' name='[host_response_time]' role='dimension' type='nominal' />
+      <column aggregation='Count' caption='Host Since' datatype='date' datatype-customized='true' name='[host_since]' role='dimension' type='ordinal' />
+      <column caption='Hostid' datatype='integer' name='[hostid]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Instant Bookable' datatype='boolean' name='[instant_bookable]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Listing Url' datatype='string' name='[listing_url]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Maximum Nights' datatype='integer' name='[maximum_nights]' role='measure' type='quantitative' />
+      <column caption='Minimum Nights' datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Neighbourhoodid (Neighbourhood Id)' datatype='integer' name='[neighbourhoodid (neighbourhood_id)]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Neighbourhoodid' datatype='integer' name='[neighbourhoodid]' role='dimension' type='ordinal' />
+      <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+      <column caption='Picture Url' datatype='string' name='[picture_url]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+      <column caption='Review Scores Accuracy' datatype='integer' name='[review_scores_accuracy]' role='measure' type='quantitative' />
+      <column caption='Review Scores Cleanliness' datatype='integer' name='[review_scores_cleanliness]' role='measure' type='quantitative' />
+      <column caption='Review Scores Communication' datatype='integer' name='[review_scores_communication]' role='measure' type='quantitative' />
+      <column caption='Review Scores Location' datatype='integer' name='[review_scores_location]' role='measure' type='quantitative' />
+      <column caption='Review Scores Rating' datatype='integer' name='[review_scores_rating]' role='measure' type='quantitative' />
+      <column caption='Review Scores Value' datatype='integer' name='[review_scores_value]' role='measure' type='quantitative' />
+      <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+      <column caption='Room Typeid (Roomtype Id)' datatype='integer' name='[room_typeid (roomtype_id)]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Room Typeid' datatype='integer' name='[room_typeid]' role='dimension' type='ordinal' />
+      <column caption='Superhost' datatype='boolean' name='[superhost]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='boroughs_id' id='boroughs_id_3DA0712BB0AC4DA38D23AEF5954F08BF'>
+            <properties context=''>
+              <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='boroughs_id' table='[public].[boroughs_id]' type='table' />
+            </properties>
+          </object>
+          <object caption='listing_master' id='listing_master_C4E3E48F707C4F14B99EB897F897DB7E'>
+            <properties context=''>
+              <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='listing_master' table='[public].[listing_master]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='MM/dd/yyyy' name='host_since' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='neighbourhood_id' id='neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21'>
+            <properties context=''>
+              <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='neighbourhood_id' table='[public].[neighbourhood_id]' type='table' />
+            </properties>
+          </object>
+          <object caption='roomtype_id' id='roomtype_id_EEDD57BA07DB44C799546162A14D22AD'>
+            <properties context=''>
+              <relation connection='postgres.03gq8200yf8iog15rf9cq0ozcw7w' name='roomtype_id' table='[public].[roomtype_id]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[borough_id]' />
+              <expression op='[borough_id (boroughs_id)]' />
+            </expression>
+            <first-end-point object-id='listing_master_C4E3E48F707C4F14B99EB897F897DB7E' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='boroughs_id_3DA0712BB0AC4DA38D23AEF5954F08BF' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[neighbourhoodid]' />
+              <expression op='[neighbourhoodid (neighbourhood_id)]' />
+            </expression>
+            <first-end-point object-id='listing_master_C4E3E48F707C4F14B99EB897F897DB7E' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='neighbourhood_id_7DFFD2E1EE8C4C10BF710B72E561AA21' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[room_typeid]' />
+              <expression op='[room_typeid (roomtype_id)]' />
+            </expression>
+            <first-end-point object-id='listing_master_C4E3E48F707C4F14B99EB897F897DB7E' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='roomtype_id_EEDD57BA07DB44C799546162A14D22AD' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Borough Name' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Borough Id' />
+        <param name='target' value='Borough Name' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Borough Name'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
+            <column aggregation='Sum' caption='Borough Id' datatype='integer' name='[borough_id]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[borough_id]' derivation='None' name='[none:borough_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[latitude]' derivation='None' name='[none:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='None' name='[none:longitude:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[none:borough_id:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:borough_id:ok]' member='1' />
+              <groupfilter function='member' level='[none:borough_id:ok]' member='2' />
+              <groupfilter function='member' level='[none:borough_id:ok]' member='3' />
+              <groupfilter function='member' level='[none:borough_id:ok]' member='4' />
+              <groupfilter function='member' level='[none:borough_id:ok]' member='5' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0zege921w4sea8195je130wvgrw5].[none:borough_id:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]' field-type='quantitative' max='-8196587.5394551056' min='-8281437.3397887796' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]' field-type='quantitative' max='5001001.1606529579' min='4952515.5582948085' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.0zege921w4sea8195je130wvgrw5].[none:borough_id:ok]' />
+              <geometry column='[federated.0zege921w4sea8195je130wvgrw5].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Borough Id:&#9;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Latitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Longitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]</rows>
+        <cols>[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{96AA252D-E93F-4025-85E9-5D2C200205C8}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7206F8F9-F06C-4D52-8D24-E1210061EF34}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Borough Name'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough_id:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{313F3613-52D8-456F-8422-9E83867194C0}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6F7ACD1D-6EE9-4C4C-8B0B-C7B61E6EC6CC}' />
+    </window>
+  </windows>
+</workbook>
