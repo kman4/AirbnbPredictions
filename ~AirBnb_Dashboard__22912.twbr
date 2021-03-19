@@ -14,6 +14,8 @@
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <_.fcp.SetMembershipControl.true...SetMembershipControl />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <SpecificWebTargetsForActions />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
@@ -15270,7 +15272,12 @@
       <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
       <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
       <column caption='Host Acceptance Rate' datatype='real' name='[host_acceptance_rate]' role='measure' type='quantitative' />
-      <column caption='Host Identity Verified' datatype='boolean' name='[host_identity_verified]' role='dimension' type='nominal' />
+      <column caption='Host Identity Verified' datatype='boolean' name='[host_identity_verified]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='No' />
+          <alias key='true' value='Yes' />
+        </aliases>
+      </column>
       <column caption='Host Listings Count' datatype='integer' name='[host_listings_count]' role='measure' type='quantitative' />
       <column caption='Host Response Rate' datatype='real' name='[host_response_rate]' role='measure' type='quantitative' />
       <column caption='Host Response Time' datatype='string' name='[host_response_time]' role='dimension' type='nominal' />
@@ -15306,9 +15313,15 @@
       <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
       <column caption='Room Typeid (Roomtype Id)' datatype='integer' name='[room_typeid (roomtype_id)]' role='measure' type='quantitative' />
       <column aggregation='Sum' caption='Room Typeid' datatype='integer' name='[room_typeid]' role='dimension' type='ordinal' />
-      <column caption='Superhost' datatype='boolean' name='[superhost]' role='dimension' type='nominal' />
+      <column caption='Superhost' datatype='boolean' name='[superhost]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='No' />
+          <alias key='true' value='Yes' />
+        </aliases>
+      </column>
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column-instance column='[room_typeid]' derivation='Count' name='[cnt:room_typeid:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
       <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
       <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
       <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
@@ -15349,7 +15362,38 @@
           </order>
         </groupfilter>
       </group>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='1000' show-structure='true' />
+      <group caption='Tooltip (Borough,Latitude,Longitude)' hidden='true' name='[Tooltip (Borough,Latitude,Longitude)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[borough]' />
+          <groupfilter function='level-members' level='[none:latitude:ok]' />
+          <groupfilter function='level-members' level='[none:longitude:ok]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='1000' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:borough:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bronx&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Staten Island&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Queens&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Manhattan&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
       </semantic-values>
@@ -15452,54 +15496,31 @@
     <mapsource name='Tableau' />
   </mapsources>
   <actions>
-    <action caption='Highlight 1 (generated)' name='[Action1]'>
+    <action caption='Listing Url' name='[Action1]'>
+      <source type='sheet' worksheet='Creating Borders' />
+      <link caption='' expression='&lt;ATTR([listing_url])&gt;'>
+        <url-action-type>browser</url-action-type>
+      </link>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action2]'>
       <activation auto-clear='true' type='on-select' />
-      <source type='sheet' worksheet='Borough Name' />
+      <source dashboard='Air Bnb New York City' type='sheet' />
       <command command='tsc:brush'>
-        <param name='field-captions' value='Borough Id' />
-        <param name='target' value='Borough Name' />
-      </command>
-    </action>
-    <action caption='Filter 1 (generated)' name='[Action2]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Reviews' />
-      <command command='tsc:tsl-filter'>
-        <param name='special-fields' value='all' />
+        <param name='field-captions' value='Borough' />
         <param name='target' value='Air Bnb New York City' />
       </command>
     </action>
-    <action caption='Filter 2 (generated)' name='[Action3]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Avg. Review Score' />
-      <command command='tsc:tsl-filter'>
-        <param name='special-fields' value='all' />
-        <param name='target' value='Air Bnb New York City' />
-      </command>
+    <action caption='Listing Url2' name='[Action3]'>
+      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Creating Borders' />
+      <link caption='' expression='&lt;ATTR([listing_url])&gt;' />
     </action>
-    <action caption='Filter 3 (generated)' name='[Action4]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Host Listing Count' />
-      <command command='tsc:tsl-filter'>
-        <param name='special-fields' value='all' />
-        <param name='target' value='Air Bnb New York City' />
-      </command>
-    </action>
-    <action caption='Filter 4 (generated)' name='[Action5]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Type of AirBnB' />
-      <command command='tsc:tsl-filter'>
-        <param name='special-fields' value='all' />
-        <param name='target' value='Air Bnb New York City' />
-      </command>
-    </action>
-    <action caption='Filter 5 (generated)' name='[Action6]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' worksheet='Borough Name' />
-      <command command='tsc:tsl-filter'>
-        <param name='special-fields' value='all' />
-        <param name='target' value='Air Bnb New York City' />
-      </command>
-    </action>
+    <datasources>
+      <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
+    </datasources>
+    <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
+      <column-instance column='[listing_url]' derivation='Attribute' name='[attr:listing_url:nk]' pivot='key' type='nominal' />
+      <column caption='Listing Url' datatype='string' name='[listing_url]' role='dimension' type='nominal' />
+    </datasource-dependencies>
   </actions>
   <worksheets>
     <worksheet name='Avg. Review Score'>
@@ -15516,24 +15537,9 @@
             <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
           </datasources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
-            <column-instance column='[number_of_reviews]' derivation='Avg' name='[avg:number_of_reviews:qk]' pivot='key' type='quantitative' />
-            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
-            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
-            <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+            <column-instance column='[review_scores_rating]' derivation='Avg' name='[avg:review_scores_rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Review Scores Rating' datatype='integer' name='[review_scores_rating]' role='measure' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[borough]' />
-              <groupfilter function='level-members' level='[none:latitude:ok]' />
-              <groupfilter function='level-members' level='[none:longitude:ok]' />
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -15556,13 +15562,14 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <text column='[federated.0zege921w4sea8195je130wvgrw5].[avg:number_of_reviews:qk]' />
+              <text column='[federated.0zege921w4sea8195je130wvgrw5].[avg:review_scores_rating:qk]' />
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Segoe UI' fontsize='15'>Avg. Review Score</run>
+                <run bold='true' fontcolor='#f17b79' fontsize='14'>AVG Review Score</run>
                 <run>Æ&#10;</run>
-                <run fontsize='12'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[avg:number_of_reviews:qk]>]]></run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[avg:review_scores_rating:qk]>]]></run>
+                <run>Æ&#10;</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -15571,6 +15578,7 @@
               </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
               </style-rule>
             </style>
           </pane>
@@ -15680,6 +15688,13 @@
       <simple-id uuid='{96AA252D-E93F-4025-85E9-5D2C200205C8}' />
     </worksheet>
     <worksheet name='Creating Borders'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#e799b3'>Air BnB listing</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -15689,19 +15704,44 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
+            <column-instance column='[listing_url]' derivation='Attribute' name='[attr:listing_url:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='Attribute' name='[attr:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[price]' derivation='Attribute' name='[attr:price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[room_type]' derivation='Attribute' name='[attr:room_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[superhost]' derivation='Attribute' name='[attr:superhost:nk]' pivot='key' type='nominal' />
             <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
             <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column caption='Listing Url' datatype='string' name='[listing_url]' role='dimension' type='nominal' />
             <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
             <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
             <column-instance column='[latitude]' derivation='None' name='[none:latitude:qk]' pivot='key' type='quantitative' />
             <column-instance column='[longitude]' derivation='None' name='[none:longitude:qk]' pivot='key' type='quantitative' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column caption='Superhost' datatype='boolean' name='[superhost]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='false' value='No' />
+                <alias key='true' value='Yes' />
+              </aliases>
+            </column>
           </datasource-dependencies>
+          <manual-sort column='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Bronx&quot;</bucket>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+              <bucket>&quot;Manhattan&quot;</bucket>
+              <bucket>&quot;Queens&quot;</bucket>
+              <bucket>&quot;Staten Island&quot;</bucket>
+              <bucket>%null%</bucket>
+            </dictionary>
+          </manual-sort>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]' field-type='quantitative' max='-8190693.485762882' min='-8265513.4954675986' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]' field-type='quantitative' max='4988488.9443285866' min='4945734.6511574825' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]' field-type='quantitative' max='-8222291.3339366103' min='-8275734.1992855854' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]' field-type='quantitative' max='4973239.1304168813' min='4942700.3488522768' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='b01002_001e' value='false' />
@@ -15747,7 +15787,25 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' />
+              <tooltip column='[federated.0zege921w4sea8195je130wvgrw5].[attr:listing_url:nk]' />
+              <tooltip column='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' />
+              <tooltip column='[federated.0zege921w4sea8195je130wvgrw5].[attr:neighbourhood:nk]' />
+              <tooltip column='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' />
+              <tooltip column='[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Borough:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]>]]></run>
+                <run><![CDATA[
+Price:                   $<[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]>
+Neighbourhoods: <[federated.0zege921w4sea8195je130wvgrw5].[attr:neighbourhood:nk]>
+Room Type:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]>
+Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
+
+]]></run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
         </panes>
         <rows>[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]</rows>
@@ -15819,24 +15877,9 @@
             <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
           </datasources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
-            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
             <column caption='Host Listings Count' datatype='integer' name='[host_listings_count]' role='measure' type='quantitative' />
-            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
             <column-instance column='[host_listings_count]' derivation='Sum' name='[sum:host_listings_count:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[borough]' />
-              <groupfilter function='level-members' level='[none:latitude:ok]' />
-              <groupfilter function='level-members' level='[none:longitude:ok]' />
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -16047,24 +16090,9 @@
             <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
           </datasources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
-            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
-            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
             <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
             <column-instance column='[number_of_reviews]' derivation='Sum' name='[sum:number_of_reviews:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[borough]' />
-              <groupfilter function='level-members' level='[none:latitude:ok]' />
-              <groupfilter function='level-members' level='[none:longitude:ok]' />
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -16185,12 +16213,7 @@
             <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
           </datasources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
-            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
             <column-instance column='[room_typeid]' derivation='Count' name='[cnt:room_typeid:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
             <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
             <column-instance column='[room_typeid]' derivation='Count' name='[pcto:cnt:room_typeid:qk:1]' pivot='key' type='quantitative'>
               <table-calc ordering-field='[federated.0zege921w4sea8195je130wvgrw5].[none:room_type:nk]' ordering-type='Field' type='PctTotal' />
@@ -16204,16 +16227,8 @@
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0zege921w4sea8195je130wvgrw5].[pcto:cnt:room_typeid:qk:1]&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[borough]' />
-              <groupfilter function='level-members' level='[none:latitude:ok]' />
-              <groupfilter function='level-members' level='[none:longitude:ok]' />
-            </groupfilter>
-          </filter>
           <slices>
             <column>[federated.0zege921w4sea8195je130wvgrw5].[:Measure Names]</column>
-            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -16356,12 +16371,12 @@
       <style />
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
-        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='14750' id='13' name='Borough Name' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='84400' y='55000' />
-        <zone h='23250' id='5' name='Type of AirBnB' w='31300' x='1000' y='12250' />
-        <zone h='47000' id='12' name='Borough Name' w='82600' x='800' y='49000' />
+        <zone h='23250' id='5' name='Type of AirBnB' w='31300' x='39900' y='13250' />
         <zone h='8750' id='16' name='Reviews' show-title='false' w='25900' x='53200' y='1000' />
         <zone h='8750' id='15' name='Avg. Review Score' show-title='false' w='25900' x='26900' y='875' />
         <zone h='8750' id='14' name='Host Listing Count' show-title='false' w='25900' x='400' y='875' />
+        <zone h='63375' id='27' name='Creating Borders' w='98500' x='700' y='36000' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17250' id='32' is-fixed='true' name='Creating Borders' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='85200' y='23500' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -16397,24 +16412,6 @@
                   </zone-style>
                 </zone>
                 <zone fixed-size='186' h='23250' id='5' is-fixed='true' name='Type of AirBnB' w='31300' x='1000' y='12250'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone fixed-size='280' h='47000' id='12' is-fixed='true' name='Borough Name' w='82600' x='800' y='49000'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='14750' id='13' name='Borough Name' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='84400' y='55000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -16701,14 +16698,15 @@
       </cards>
       <simple-id uuid='{F1DC1EC8-D08C-45CE-8CB3-BB0FCD75FA2C}' />
     </window>
-    <window class='dashboard' name='Air Bnb New York City' tab-color='#f66273'>
+    <window class='dashboard' maximized='true' name='Air Bnb New York City' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='Avg. Review Score'>
           <zoom type='entire-view' />
         </viewpoint>
-        <viewpoint name='Borough Name'>
+        <viewpoint name='Creating Borders'>
           <zoom type='entire-view' />
           <map-scale-visibility value='0' />
+          <default-map-unit-selection mapunit='2' />
         </viewpoint>
         <viewpoint name='Host Listing Count'>
           <zoom type='entire-view' />
@@ -16720,7 +16718,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='27' />
       <simple-id uuid='{5FB1FB2A-1BAF-43C2-944A-B6A5BD6AEFE3}' />
     </window>
     <window class='dashboard' name='Dashboard 2' tab-color='#f66273'>
@@ -16761,7 +16759,7 @@
       </viewpoint>
       <simple-id uuid='{D667AFEE-B86E-4244-BA96-13A7F620EEA7}' />
     </window>
-    <window class='worksheet' maximized='true' name='Review Score'>
+    <window class='worksheet' name='Review Score'>
       <cards>
         <edge name='left'>
           <strip size='235'>
@@ -16783,6 +16781,10 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
+            <card param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_location:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_communication:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_cleanliness:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_accuracy:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
             <card pane-specification-id='2' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' type='color' />
           </strip>
         </edge>
