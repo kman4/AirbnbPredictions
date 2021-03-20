@@ -17587,12 +17587,20 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           </datasources>
           <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
             <column caption='Actual' datatype='real' name='[actual]' role='measure' type='quantitative' />
+            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
             <column-instance column='[actual]' derivation='Count' name='[cnt:actual:qk]' pivot='key' type='quantitative' />
             <column-instance column='[predictions]' derivation='Count' name='[cnt:predictions:qk]' pivot='key' type='quantitative' />
             <column caption='Ds' datatype='date' name='[ds]' role='dimension' type='ordinal' />
+            <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
             <column caption='Predictions' datatype='real' name='[predictions]' role='measure' type='quantitative' />
             <column-instance column='[ds]' derivation='Year-Trunc' name='[tyr:ds:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]'>
+            <groupfilter function='level-members' level='[none:borough:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -17923,8 +17931,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='45' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='44' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='49' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='48' param='vert' w='98400' x='800' y='1000'>
                 <zone fixed-size='70' h='8750' id='14' is-fixed='true' name='Host Listing Count' show-title='false' w='25200' x='400' y='875'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18066,8 +18074,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='11' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='10' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='15' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='14' param='vert' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Map' w='82400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18185,8 +18193,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           </layout-options>
           <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='20' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='19' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='24' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='23' param='vert' w='98400' x='800' y='1000'>
                 <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='5125' id='16' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18387,8 +18395,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='39' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='38' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='43' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='42' param='vert' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='42625' id='19' is-fixed='true' name='Top Listings' w='41200' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -19162,6 +19170,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <highlight>
           <color-one-way>
             <field>[federated.0zege921w4sea8195je130wvgrw5].[:Measure Names]</field>
+            <field>[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]</field>
             <field>[federated.0zege921w4sea8195je130wvgrw5].[none:room_typeid (prediction_rates):qk]</field>
             <field>[federated.0zege921w4sea8195je130wvgrw5].[yr:ds:ok]</field>
           </color-one-way>
