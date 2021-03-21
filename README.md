@@ -22,10 +22,10 @@ Our goal here is to increase the transparency of the Airbnb pricing process by p
 
 ## Team Members
 
-** Amaris Hassan - Data Research Specialist and Presenter
-** Caitlan Beachey - Tableau Specialist
-** Cecilia Leung - Machine Learning Model Specialist and Presenter
-** Hillary Mandich - ETL Specialist and Tableau Consultant
-** Kapil Kundhir - Tableau & ETL Specialist
+** Amaris Hassan** - Data Research Specialist and Presenter
+** Caitlan Beachey** - Tableau Specialist
+** Cecilia Leung** - Machine Learning Model Specialist and Presenter
+** Hillary Mandich** - ETL Specialist and Tableau Consultant
+** Kapil Kundhir** - Tableau & ETL Specialist
 
 
