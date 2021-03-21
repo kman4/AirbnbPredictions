@@ -6,29 +6,34 @@
 
 Our goal here is to increase the transparency of the Airbnb pricing process by predicting the prices of listings in New York!
 
-Team Members:
-* Amaris Hassan 
-* Caitlan Beachey
-* Cecilia Leung
-* Hillary Mandich
-* Kapil Pundhir
+## Questions
+
+1.	Is location the most important factor in determining a listing price?
+2.	How do the listing rates change with amenities & accommodations?
+3.	How does the number of units available within a specific area affect the price of Airbnb?
+4.	Do good reviews drive up the rates?
+5.	Should a host price their listing differently during a specific time of the week, month, year and holidays?
+
+## Datasets
+Get the Data - Inside Airbnb - [http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html)<br>
+US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate.com/holidays/us/), [https://www.kaggle.com/benjaminhendler/usholidays](https://www.kaggle.com/benjaminhendler/usholidays)
 
 ## Requirements
 
-SQL Database<br>
-Tableau<br>
-Tablea Public<br>
+## Scripts
 
-Machine Learning - Models
+## Model Analysis
 
-* Random Forest
-* Lasso Regression or Ridge Regression
-* KNN Model
+## Results
 
-## Interactive Dashboard
+## Dashboard
 
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Tableau.PNG)
+## Team Members
 
-Possible Visulaizations <br>
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)<br>
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/heatmap.png)<br>
+**Amaris Hassan** - Data Research Specialist and Presenter<br>
+**Caitlan Beachey** - Tableau Specialist<br>
+**Cecilia Leung** - Machine Learning Model Specialist and Presenter<br>
+**Hillary Mandich** - ETL Specialist and Tableau Consultant<br>
+**Kapil Kundhir** - Tableau & ETL Specialist
+
+
