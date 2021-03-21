@@ -6,29 +6,26 @@
 
 Our goal here is to increase the transparency of the Airbnb pricing process by predicting the prices of listings in New York!
 
-Team Members:
-* Amaris Hassan 
-* Caitlan Beachey
-* Cecilia Leung
-* Hillary Mandich
-* Kapil Pundhir
+## Questions
+
+## Datasets
 
 ## Requirements
 
-SQL Database<br>
-Tableau<br>
-Tablea Public<br>
+## Scripts
 
-Machine Learning - Models
+## Model Analysis
 
-* Random Forest
-* Lasso Regression or Ridge Regression
-* KNN Model
+## Results
 
-## Interactive Dashboard
+## Dashboard
 
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Tableau.PNG)
+## Team Members
 
-Possible Visulaizations <br>
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Bar.png)<br>
-![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/heatmap.png)<br>
+** Amaris Hassan - Data Research Specialist and Presenter
+** Caitlan Beachey - Tableau Specialist
+** Cecilia Leung - Machine Learning Model Specialist and Presenter
+** Hillary Mandich - ETL Specialist and Tableau Consultant
+** Kapil Kundhir - Tableau & ETL Specialist
+
+
