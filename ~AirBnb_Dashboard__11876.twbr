@@ -16907,10 +16907,10 @@
           <style-rule element='cell'>
             <format attr='border-color' scope='cols' value='#ff5a5f' />
             <format attr='border-color' scope='rows' value='#ff5a5f' />
-            <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-width' scope='rows' value='5' />
             <format attr='border-width' scope='cols' value='0' />
             <format attr='border-style' scope='cols' value='none' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='table'>
             <format attr='background-color' value='#ffffff' />
@@ -16932,7 +16932,7 @@
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Average Review Score</run>
+                <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Average Review Score</run>
                 <run>Æ&#10;</run>
                 <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[avg:review_scores_rating:qk]>]]></run>
                 <run>Æ&#10;</run>
@@ -17205,6 +17205,122 @@
         </view>
         <style>
           <style-rule element='cell'>
+            <format attr='border-style' scope='cols' value='solid' />
+            <format attr='border-width' scope='cols' value='3' />
+            <format attr='border-color' scope='cols' value='#000000' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='color' value='#000000' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='1' />
+            <format attr='border-color' data-class='subtotal' scope='cols' value='#e15759' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='font-family' scope='rows' value='Airbnb Cereal App Light' />
+            <format attr='background-color' scope='rows' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' scope='cols' value='solid' />
+            <format attr='border-width' scope='cols' value='3' />
+            <format attr='background-color' value='#ffffff' />
+            <format attr='background-color' data-class='subtotal' value='#ffffff' />
+            <format attr='band-color' scope='rows' value='#000000' />
+            <format attr='border-color' scope='cols' value='#ffffff' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#ffffff' />
+            <format attr='band-size' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-family' value='Airbnb Cereal App' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Listings</run>
+                <run>Æ&#10;</run>
+                <run fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7206F8F9-F06C-4D52-8D24-E1210061EF34}' />
+    </worksheet>
+    <worksheet name='Lines'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listing_master+ (ablekwsj)' name='federated.0zege921w4sea8195je130wvgrw5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zege921w4sea8195je130wvgrw5'>
+            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+            <column-instance column='[id]' derivation='Count' name='[cnt:id:qk]' pivot='key' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[latitude]' derivation='None' name='[none:latitude:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[longitude]' derivation='None' name='[none:longitude:ok]' pivot='key' type='ordinal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough)]'>
+            <groupfilter function='level-members' level='[borough]' user:ui-action-filter='[Action4]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action14]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[borough]' />
+              <groupfilter function='level-members' level='[none:latitude:ok]' />
+              <groupfilter function='level-members' level='[none:longitude:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
+            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough)]</column>
+            <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
             <format attr='border-style' scope='rows' value='solid' />
             <format attr='border-width' scope='rows' value='3' />
             <format attr='border-style' scope='cols' value='solid' />
@@ -17263,9 +17379,13 @@
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Listings</run>
+                <run fontcolor='#ffffff'>cccccc</run>
                 <run>Æ&#10;</run>
-                <run fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]>]]></run>
+                <run fontcolor='#ffffff'>ccccccc</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#ffffff'>cccccc</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#ffffff'>ccccc</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -17282,7 +17402,7 @@
         <rows />
         <cols />
       </table>
-      <simple-id uuid='{7206F8F9-F06C-4D52-8D24-E1210061EF34}' />
+      <simple-id uuid='{BFB4BA48-DD5E-430D-BE03-0F4DBAFD75F8}' />
     </worksheet>
     <worksheet name='Map'>
       <layout-options>
@@ -17621,34 +17741,28 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-width' scope='rows' value='3' />
             <format attr='border-color' scope='rows' value='#8cd17d' />
             <format attr='border-color' scope='cols' value='#8cd17d' />
             <format attr='border-width' scope='cols' value='0' />
             <format attr='border-style' scope='cols' value='none' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='header'>
             <format attr='band-color' scope='rows' value='#00000000' />
-            <format attr='border-width' scope='rows' value='3' />
-            <format attr='border-style' scope='rows' value='solid' />
             <format attr='border-color' scope='rows' value='#ff5a5f' />
-            <format attr='border-width' data-class='total' scope='rows' value='0' />
-            <format attr='border-style' data-class='total' scope='rows' value='none' />
-            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
-            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='pane'>
             <format attr='band-color' scope='rows' value='#00000000' />
             <format attr='background-color' data-class='total' scope='cols' value='#c0c0c0' />
-            <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-style' data-class='total' scope='rows' value='none' />
-            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
             <format attr='border-color' scope='cols' value='#8cd17d' />
             <format attr='border-width' scope='cols' value='0' />
             <format attr='border-style' scope='cols' value='none' />
             <format attr='border-color' scope='rows' value='#ff5a5f' />
-            <format attr='border-width' scope='rows' value='5' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='table'>
             <format attr='band-size' scope='rows' value='1' />
@@ -17666,7 +17780,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Boroughs</run>
+                <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Boroughs</run>
                 <run>Æ&#10;</run>
                 <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[cnt:borough:qk]>]]></run>
               </formatted-text>
@@ -17812,12 +17926,12 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='border-style' scope='rows' value='solid' />
             <format attr='border-color' scope='rows' value='#ff5a5f' />
             <format attr='border-color' scope='cols' value='#ff5a5f' />
             <format attr='border-width' scope='cols' value='0' />
             <format attr='border-style' scope='cols' value='none' />
-            <format attr='border-width' scope='rows' value='5' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='table'>
             <format attr='background-color' value='#ffffff' />
@@ -17834,7 +17948,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Reviews</run>
+                <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Reviews</run>
                 <run>Æ&#10;</run>
                 <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[sum:number_of_reviews:qk]>]]></run>
               </formatted-text>
@@ -18024,6 +18138,26 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <cols />
       </table>
       <simple-id uuid='{E143DDF7-B6E4-4EA0-BDCC-0EEBB9063C5E}' />
+    </worksheet>
+    <worksheet name='Sheet 18'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E8D47361-498E-4DAB-AF20-2758FB69E598}' />
     </worksheet>
     <worksheet name='Top Listings'>
       <layout-options>
@@ -18363,15 +18497,16 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
       </datasource-dependencies>
       <zones>
-        <zone h='20875' id='5' name='Type of AirBnB' w='29400' x='10900' y='18875' />
-        <zone h='8750' id='16' name='Reviews' show-title='false' w='22700' x='53700' y='7625' />
-        <zone h='8750' id='15' name='Avg. Review Score' show-title='false' w='23300' x='29600' y='7500' />
+        <zone h='20875' id='5' name='Type of AirBnB' w='29400' x='6400' y='18875' />
+        <zone h='8750' id='16' name='Reviews' show-title='false' w='22700' x='52300' y='7500' />
+        <zone h='8750' id='15' name='Avg. Review Score' show-title='false' w='23300' x='27800' y='7625' />
         <zone h='52875' id='27' name='Map' w='69300' x='6100' y='41375' />
         <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17750' id='32' is-fixed='true' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='80100' y='42625' />
-        <zone h='8750' id='35' name='No of Boroughs' show-title='false' w='21900' x='77100' y='7625' />
-        <zone h='22875' id='36' name='Yearly Average Rate' w='56300' x='41200' y='18750' />
+        <zone h='8750' id='35' name='No of Boroughs' show-title='false' w='21900' x='76400' y='7500' />
+        <zone h='22875' id='36' name='Yearly Average Rate' w='56300' x='39600' y='19500' />
         <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6875' id='43' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' show-morefewerbutton='true' show-null-ctrls='false' values='all' w='23700' x='76100' y='60250' />
-        <zone h='8750' id='14' name='Host Listing Count' show-title='false' w='25200' x='3100' y='7625' />
+        <zone h='8750' id='14' name='Host Listing Count' show-title='false' w='25200' x='1900' y='7500' />
+        <zone h='26375' id='54' name='Lines' w='100100' x='500' y='5125' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -19050,6 +19185,29 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </viewpoint>
       <simple-id uuid='{6F7ACD1D-6EE9-4C4C-8B0B-C7B61E6EC6CC}' />
     </window>
+    <window class='worksheet' name='Lines'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{266F6F42-49D5-4A7B-962A-C25AF883D56C}' />
+    </window>
     <window class='worksheet' name='No of Boroughs'>
       <cards>
         <edge name='left'>
@@ -19251,13 +19409,16 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </cards>
       <simple-id uuid='{F1DC1EC8-D08C-45CE-8CB3-BB0FCD75FA2C}' />
     </window>
-    <window class='dashboard' name='Air Bnb New York City' tab-color='#f66273'>
+    <window class='dashboard' maximized='true' name='Air Bnb New York City' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='Avg. Review Score'>
-          <zoom type='entire-view' />
+          <zoom type='fit-width' />
         </viewpoint>
         <viewpoint name='Host Listing Count'>
-          <zoom type='entire-view' />
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Lines'>
+          <zoom type='fit-width' />
         </viewpoint>
         <viewpoint name='Map'>
           <zoom type='entire-view' />
@@ -19266,10 +19427,10 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <default-map-unit-selection mapunit='2' />
         </viewpoint>
         <viewpoint name='No of Boroughs'>
-          <zoom type='entire-view' />
+          <zoom type='fit-width' />
         </viewpoint>
         <viewpoint name='Reviews'>
-          <zoom type='entire-view' />
+          <zoom type='fit-width' />
         </viewpoint>
         <viewpoint name='Type of AirBnB'>
           <zoom type='entire-view' />
@@ -19278,7 +19439,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='54' />
       <simple-id uuid='{5FB1FB2A-1BAF-43C2-944A-B6A5BD6AEFE3}' />
     </window>
     <window class='dashboard' name='Top Review Score' tab-color='#f66273'>
@@ -19468,7 +19629,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       <active id='-1' />
       <simple-id uuid='{2094B429-16A6-4C3D-9970-D11A130A9C5D}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 17'>
+    <window class='worksheet' name='Sheet 17'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -19478,10 +19639,10 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
           <strip size='31'>
@@ -19490,6 +19651,29 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         </edge>
       </cards>
       <simple-id uuid='{C3F156CD-4AE6-4798-B67D-5D8688EADDB2}' />
+    </window>
+    <window class='worksheet' name='Sheet 18'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6273399C-9EE5-41AA-B5C7-B461041577FB}' />
     </window>
   </windows>
 </workbook>
