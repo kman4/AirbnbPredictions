@@ -8,7 +8,15 @@ Our goal here is to increase the transparency of the Airbnb pricing process by p
 
 ## Questions
 
+1.	Is location the most important factor in determining a listing price?
+2.	How do the listing rates change with amenities & accommodations?
+3.	How does the number of units available within a specific area affect the price of Airbnb?
+4.	Do good reviews drive up the rates?
+5.	Should a host price their listing differently during a specific time of the week, month, year and holidays?
+
 ## Datasets
+Get the Data - Inside Airbnb - [http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html)<br>
+US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate.com/holidays/us/), [https://www.kaggle.com/benjaminhendler/usholidays (https://www.kaggle.com/benjaminhendler/usholidays)
 
 ## Requirements
 
