@@ -16689,14 +16689,6 @@
         <url-action-type>browser</url-action-type>
       </link>
     </action>
-    <action caption='Highlight 1 (generated)' name='[Action2]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='Air Bnb New York City' type='sheet' />
-      <command command='tsc:brush'>
-        <param name='field-captions' value='Borough' />
-        <param name='target' value='Air Bnb New York City' />
-      </command>
-    </action>
     <action caption='Listing Link' name='[Action3]'>
       <source dashboard='Air Bnb New York City' type='sheet' worksheet='Map' />
       <link caption='' expression='&lt;ATTR([listing_url])&gt;' />
@@ -16902,7 +16894,7 @@
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
@@ -16914,11 +16906,11 @@
         <style>
           <style-rule element='cell'>
             <format attr='border-color' scope='cols' value='#ff5a5f' />
-            <format attr='border-style' scope='cols' value='solid' />
-            <format attr='border-width' scope='cols' value='3' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
             <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-width' scope='rows' value='3' />
-            <format attr='border-color' scope='rows' value='#ffffff' />
+            <format attr='border-width' scope='rows' value='5' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
           </style-rule>
           <style-rule element='table'>
             <format attr='background-color' value='#ffffff' />
@@ -16940,9 +16932,9 @@
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#f17b79' fontsize='14'>AVG Review Score</run>
+                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Average Review Score</run>
                 <run>Æ&#10;</run>
-                <run bold='true' fontsize='12'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[avg:review_scores_rating:qk]>]]></run>
+                <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[avg:review_scores_rating:qk]>]]></run>
                 <run>Æ&#10;</run>
               </formatted-text>
             </customized-label>
@@ -17202,7 +17194,7 @@
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
@@ -17218,7 +17210,8 @@
             <format attr='border-style' scope='cols' value='solid' />
             <format attr='border-width' scope='cols' value='3' />
             <format attr='border-color' scope='cols' value='#000000' />
-            <format attr='border-color' scope='rows' value='#e15759' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='color' value='#000000' />
           </style-rule>
           <style-rule element='header'>
             <format attr='band-color' scope='rows' value='#00000000' />
@@ -17238,10 +17231,7 @@
           </style-rule>
           <style-rule element='pane'>
             <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-width' scope='rows' value='3' />
-            <format attr='border-width' data-class='total' scope='rows' value='0' />
             <format attr='border-style' data-class='total' scope='rows' value='none' />
-            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
             <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
             <format attr='border-style' scope='cols' value='solid' />
             <format attr='border-width' scope='cols' value='3' />
@@ -17249,7 +17239,8 @@
             <format attr='background-color' data-class='subtotal' value='#ffffff' />
             <format attr='band-color' scope='rows' value='#000000' />
             <format attr='border-color' scope='cols' value='#ffffff' />
-            <format attr='border-color' scope='rows' value='#e15759' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='border-width' scope='rows' value='5' />
           </style-rule>
           <style-rule element='table'>
             <format attr='band-size' scope='rows' value='1' />
@@ -17272,9 +17263,9 @@
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#e799b3' fontsize='15'>Total Listings</run>
-                <run><![CDATA[
-<[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]>]]></run>
+                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Listings</run>
+                <run>Æ&#10;</run>
+                <run fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]>]]></run>
               </formatted-text>
             </customized-label>
             <style>
@@ -17296,9 +17287,7 @@
     <worksheet name='Map'>
       <layout-options>
         <title>
-          <formatted-text>
-            <run bold='true' fontcolor='#e799b3'>Air BnB listing</run>
-          </formatted-text>
+          <formatted-text />
         </title>
       </layout-options>
       <table>
@@ -17338,7 +17327,7 @@
             <groupfilter function='level-members' level='[borough]' user:ui-action-filter='[Action4]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='quantitative' column='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' included-values='in-range'>
             <min>0</min>
@@ -17372,11 +17361,34 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]' field-type='quantitative' max='-8217182.8389648693' min='-8318422.3644742128' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]' field-type='quantitative' max='4964543.8584325006' min='4915776.0394686563' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]' field-type='quantitative' max='-8208388.5873939153' min='-8248247.2155697197' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]' field-type='quantitative' max='4975337.501404576' min='4957451.1503172666' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' scope='rows' value='#000000' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='size' field='[federated.0zege921w4sea8195je130wvgrw5].[sum:price:qk]' field-type='quantitative' max-size='1' min-size='0.01' type='rangesize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-family' value='Airbnb Cereal App' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Airbnb Cereal App' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='b01002_001e' value='false' />
@@ -17412,6 +17424,13 @@
           <style-rule element='map-data-layer'>
             <format attr='palette' value='tableau-map-blue-green-light' />
             <format attr='geo-area-type' value='State' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' value='Price per Night'>
+              <formatted-text>
+                <run fontalignment='1'>Price per Night</run>
+              </formatted-text>
+            </format>
           </style-rule>
         </style>
         <panes>
@@ -17474,30 +17493,6 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                 <value>&quot;Manhattan&quot;</value>
                 <value>40.752429999999997</value>
                 <value>-73.970559999999992</value>
-              </tuple>
-            </tuple-reference>
-          </mark-label>
-          <mark-label id='1' label-state='on'>
-            <tuple-reference>
-              <tuple-descriptor>
-                <pane-descriptor>
-                  <x-fields>
-                    <field>[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]</field>
-                  </x-fields>
-                  <y-fields>
-                    <field>[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]</field>
-                  </y-fields>
-                </pane-descriptor>
-                <columns>
-                  <field>[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]</field>
-                  <field>[federated.0zege921w4sea8195je130wvgrw5].[none:latitude:qk]</field>
-                  <field>[federated.0zege921w4sea8195je130wvgrw5].[none:longitude:qk]</field>
-                </columns>
-              </tuple-descriptor>
-              <tuple>
-                <value>&quot;Queens&quot;</value>
-                <value>40.738659999999996</value>
-                <value>-73.895719999999997</value>
               </tuple>
             </tuple-reference>
           </mark-label>
@@ -17591,7 +17586,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
@@ -17604,10 +17599,10 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <style-rule element='cell'>
             <format attr='border-style' scope='rows' value='solid' />
             <format attr='border-width' scope='rows' value='3' />
-            <format attr='border-style' scope='cols' value='solid' />
-            <format attr='border-width' scope='cols' value='3' />
             <format attr='border-color' scope='rows' value='#8cd17d' />
             <format attr='border-color' scope='cols' value='#8cd17d' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
           </style-rule>
           <style-rule element='header'>
             <format attr='band-color' scope='rows' value='#00000000' />
@@ -17623,19 +17618,17 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             <format attr='band-color' scope='rows' value='#00000000' />
             <format attr='background-color' data-class='total' scope='cols' value='#c0c0c0' />
             <format attr='border-style' scope='rows' value='solid' />
-            <format attr='border-width' scope='rows' value='3' />
-            <format attr='border-width' data-class='total' scope='rows' value='0' />
             <format attr='border-style' data-class='total' scope='rows' value='none' />
-            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
             <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
-            <format attr='border-style' scope='cols' value='solid' />
-            <format attr='border-width' scope='cols' value='3' />
             <format attr='border-color' scope='cols' value='#8cd17d' />
-            <format attr='border-color' scope='rows' value='#8cd17d' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+            <format attr='border-color' scope='rows' value='#ff5a5f' />
+            <format attr='border-width' scope='rows' value='5' />
           </style-rule>
           <style-rule element='table'>
             <format attr='band-size' scope='rows' value='1' />
-            <format attr='background-color' value='#e6e6e6' />
+            <format attr='background-color' value='#ffffff' />
           </style-rule>
         </style>
         <panes>
@@ -17649,9 +17642,9 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#e799b3' fontsize='15'>No. of Boroughs</run>
-                <run><![CDATA[
-<[federated.0zege921w4sea8195je130wvgrw5].[cnt:borough:qk]>]]></run>
+                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Boroughs</run>
+                <run>Æ&#10;</run>
+                <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[cnt:borough:qk]>]]></run>
               </formatted-text>
             </customized-label>
             <style>
@@ -17784,7 +17777,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0zege921w4sea8195je130wvgrw5].[Action (Borough,Latitude,Longitude)]</column>
@@ -17795,15 +17788,15 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='border-width' scope='rows' value='3' />
             <format attr='border-style' scope='rows' value='solid' />
             <format attr='border-color' scope='rows' value='#ff5a5f' />
-            <format attr='border-width' scope='cols' value='2' />
-            <format attr='border-style' scope='cols' value='solid' />
             <format attr='border-color' scope='cols' value='#ff5a5f' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+            <format attr='border-width' scope='rows' value='5' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value='#e6e6e6' />
+            <format attr='background-color' value='#ffffff' />
           </style-rule>
         </style>
         <panes>
@@ -17817,9 +17810,9 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </encodings>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontcolor='#ff5a5f' fontname='Segoe UI' fontsize='14'>Reviews</run>
+                <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='15'>Total Reviews</run>
                 <run>Æ&#10;</run>
-                <run fontname='Segoe UI' fontsize='12'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[sum:number_of_reviews:qk]>]]></run>
+                <run fontname='Airbnb Cereal App' fontsize='15'><![CDATA[<[federated.0zege921w4sea8195je130wvgrw5].[sum:number_of_reviews:qk]>]]></run>
               </formatted-text>
             </customized-label>
             <style>
@@ -18075,7 +18068,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Book'>Air Bnb Room Types</run>
+            <run bold='true' fontalignment='1' fontcolor='#ff5a5f' fontname='Airbnb Cereal App Book'>Air Bnb Room Types</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -18238,7 +18231,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0zege921w4sea8195je130wvgrw5].[Action (Room Type)]'>
-            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action13]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[room_type]' member='&quot;Entire home/apt&quot;' user:ui-action-filter='[Action13]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0zege921w4sea8195je130wvgrw5].[avg:price (rates_yearly):qk]' shelf='rows' />
@@ -18276,23 +18269,23 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
       </datasource-dependencies>
       <zones>
-        <zone h='23250' id='5' name='Type of AirBnB' w='31300' x='300' y='10000' />
-        <zone h='8750' id='16' name='Reviews' show-title='false' w='22700' x='53200' y='875' />
-        <zone h='8750' id='15' name='Avg. Review Score' show-title='false' w='23300' x='26900' y='875' />
-        <zone h='8750' id='14' name='Host Listing Count' show-title='false' w='25200' x='1800' y='875' />
-        <zone h='64750' id='27' name='Map' w='98500' x='400' y='34250' />
-        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17750' id='32' is-fixed='true' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='84800' y='18125' />
-        <zone h='8750' id='35' name='No of Boroughs' show-title='false' w='21900' x='77800' y='875' />
-        <zone h='22875' id='36' name='Yearly Average Rate' w='51800' x='32800' y='10375' />
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7625' id='43' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' show-morefewerbutton='true' show-null-ctrls='false' values='database' w='48100' x='31700' y='33375' />
+        <zone h='20875' id='5' name='Type of AirBnB' w='29400' x='6000' y='17500' />
+        <zone h='8750' id='16' name='Reviews' show-title='false' w='22700' x='53400' y='3875' />
+        <zone h='8125' id='15' name='Avg. Review Score' show-title='false' w='26900' x='19800' y='3250' />
+        <zone h='54250' id='27' name='Map' w='75100' x='300' y='40000' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17750' id='32' is-fixed='true' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='80100' y='42625' />
+        <zone h='8750' id='35' name='No of Boroughs' show-title='false' w='21900' x='72400' y='3625' />
+        <zone h='22875' id='36' name='Yearly Average Rate' w='51800' x='41700' y='16875' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6875' id='43' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' show-morefewerbutton='true' show-null-ctrls='false' values='all' w='23700' x='76100' y='60250' />
+        <zone h='8500' id='14' name='Host Listing Count' show-title='false' w='27400' x='1200' y='12875' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='49' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='48' param='vert' w='98400' x='800' y='1000'>
-                <zone fixed-size='70' h='8750' id='14' is-fixed='true' name='Host Listing Count' show-title='false' w='25200' x='400' y='875'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='51' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='50' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='70' h='8750' id='14' is-fixed='true' name='Host Listing Count' show-title='false' w='25200' x='1800' y='875'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -18364,7 +18357,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17750' id='32' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='85500' y='10500'>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='17750' id='32' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='14000' x='84800' y='18125'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -18433,8 +18426,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='15' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='14' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='17' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='16' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Map' w='82400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18552,8 +18545,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           </layout-options>
           <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='24' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='23' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='26' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='25' param='vert' w='84000' x='8000' y='8000'>
                 <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='5125' id='16' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18754,8 +18747,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='43' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='42' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='45' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='44' param='vert' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='42625' id='19' is-fixed='true' name='Top Listings' w='41200' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -18986,7 +18979,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </viewpoint>
       <simple-id uuid='{00E4BBFA-305B-43D7-B23B-343F3644A965}' />
     </window>
-    <window class='worksheet' maximized='true' name='Avg. Review Score'>
+    <window class='worksheet' name='Avg. Review Score'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -19164,7 +19157,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </cards>
       <simple-id uuid='{F1DC1EC8-D08C-45CE-8CB3-BB0FCD75FA2C}' />
     </window>
-    <window class='dashboard' name='Air Bnb New York City' tab-color='#f66273'>
+    <window class='dashboard' maximized='true' name='Air Bnb New York City' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='Avg. Review Score'>
           <zoom type='entire-view' />
@@ -19175,6 +19168,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <viewpoint name='Map'>
           <zoom type='entire-view' />
           <map-scale-visibility value='0' />
+          <default-map-tool-selection tool='1' />
           <default-map-unit-selection mapunit='2' />
         </viewpoint>
         <viewpoint name='No of Boroughs'>
@@ -19190,7 +19184,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='15' />
       <simple-id uuid='{5FB1FB2A-1BAF-43C2-944A-B6A5BD6AEFE3}' />
     </window>
     <window class='dashboard' name='Top Review Score' tab-color='#f66273'>
@@ -19203,7 +19197,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         </viewpoint>
         <viewpoint name='Top Listings' />
       </viewpoints>
-      <active id='31' />
+      <active id='-1' />
       <simple-id uuid='{FFB3D672-54BD-445F-9839-1FB8EADC7601}' />
     </window>
     <window class='worksheet' name='Map'>
@@ -19221,9 +19215,6 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           </strip>
           <strip size='2147483647'>
             <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
           </strip>
         </edge>
         <edge name='right'>
@@ -19380,7 +19371,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <default-map-unit-selection mapunit='2' />
         </viewpoint>
       </viewpoints>
-      <active id='9' />
+      <active id='-1' />
       <simple-id uuid='{2094B429-16A6-4C3D-9970-D11A130A9C5D}' />
     </window>
   </windows>
