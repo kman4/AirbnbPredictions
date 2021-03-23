@@ -4,7 +4,7 @@
 
 ## Background
 
-Our goal here is to increase the transparency of the Airbnb pricing process by predicting the prices of listings in New York!
+To ensure that listings are fairly priced for both the hosts and the visitors. We hope to do this by the increasing transparency of the process to discover which features of a listing are most correlated with price.  Different regression models like Random Forest, Light Gradient Boosting Machine (LGBM), K-Nearest Neighbour (KNN) and Facebook (FB) Prophet were used to determine how seasonality, clustering and features impact the listings prices.
 
 ## Questions
 
