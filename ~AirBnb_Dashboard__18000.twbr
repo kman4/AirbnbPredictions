@@ -4,7 +4,6 @@
 <workbook source-build='2020.3.6 (20203.21.0216.1504)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AutoCreateAndUpdateDSDPhoneLayouts />
-    <DashboardGridOverlay />
     <Heatmap />
     <IntuitiveSorting />
     <IntuitiveSorting_SP2 />
@@ -17599,6 +17598,11 @@
             <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' value='Room Type' />
             <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[cnt:bedrooms:qk]' value='# of Bedrooms' />
             <format attr='background-color' value='#ffffff' />
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_rating:qk]' value='Overall Score'>
+              <formatted-text>
+                <run>Overall Score</run>
+              </formatted-text>
+            </format>
           </style-rule>
           <style-rule element='quick-filter-title'>
             <format attr='font-family' value='Airbnb Cereal App' />
@@ -18684,7 +18688,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
             <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='11'>AirBnb Listing Filters</run>
           </formatted-text>
         </zone>
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7500' id='78' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_rating:qk]' values='database' w='16000' x='73100' y='42750' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8250' id='78' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_rating:qk]' values='database' w='24100' x='74500' y='84125' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -19121,7 +19125,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
               </zone>
             </zone>
             <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='22' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
-              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='2750' id='24' name='Top Listings' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8125' id='24' name='Top Listings' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[cnt:id:qk]' w='16000' x='83200' y='1000'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19129,7 +19133,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='26' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[tyr:host_since:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='3750'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='26' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[tyr:host_since:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='9125'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19137,7 +19141,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='27' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_location:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='7000'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='27' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_location:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='17750'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19145,7 +19149,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='28' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_communication:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='10250'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='28' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_communication:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='26375'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19153,7 +19157,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='29' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_cleanliness:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='13500'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='29' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_cleanliness:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='35000'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19161,7 +19165,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='30' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_accuracy:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='16750'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='30' name='Average Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_accuracy:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='43625'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19169,7 +19173,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='32' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_location:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='20000'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='32' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_location:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='52250'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19177,7 +19181,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='33' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_communication:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='23250'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='33' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_communication:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='60875'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19185,7 +19189,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='34' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_cleanliness:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='26500'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='34' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_cleanliness:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='69500'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19193,7 +19197,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='3250' id='35' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_accuracy:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='29750'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8625' id='35' name='Review Score' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_accuracy:qk]' show-domain='false' show-null-ctrls='false' w='16000' x='83200' y='78125'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -19671,7 +19675,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </cards>
       <simple-id uuid='{F1DC1EC8-D08C-45CE-8CB3-BB0FCD75FA2C}' />
     </window>
-    <window class='dashboard' maximized='true' name='Air Bnb New York City' tab-color='#f66273'>
+    <window class='dashboard' name='Air Bnb New York City' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='Avg. Review Score'>
           <zoom type='fit-width' />
@@ -19701,8 +19705,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='27' />
-      <grid grid-overlay-mode='on' />
+      <active id='-1' />
       <simple-id uuid='{5FB1FB2A-1BAF-43C2-944A-B6A5BD6AEFE3}' />
     </window>
     <window class='dashboard' name='Top Review Score' tab-color='#f66273'>
@@ -19918,7 +19921,7 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
       </cards>
       <simple-id uuid='{C3F156CD-4AE6-4798-B67D-5D8688EADDB2}' />
     </window>
-    <window class='worksheet' name='Sheet 18'>
+    <window class='worksheet' maximized='true' name='Sheet 18'>
       <cards>
         <edge name='left'>
           <strip size='160'>
