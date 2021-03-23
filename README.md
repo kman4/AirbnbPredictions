@@ -47,8 +47,8 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 **Amaris Hassan** - Data Research Specialist and Presenter<br>
 **Caitlan Beachey** - Tableau Specialist<br>
-**Cecilia Leung** - Machine Learning Model Specialist and Presenter<br>
-**Hillary Mandich** - ETL Specialist and Tableau Consultant<br>
+**Cecilia Leung** - Model Developer and Presenter<br>
+**Hillary Mandich** - Project Coordinator and Tableau Consultant<br>
 **Kapil Kundhir** - Tableau & ETL Specialist
 
 
