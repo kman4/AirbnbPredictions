@@ -4,7 +4,7 @@
 
 ## Background
 
-To ensure that Airbnb listings are fairly priced for both the hosts and the visitors. We hope to do this by the increasing transparency of the process to discover which features of a listing are most correlated with price.  Various new and existing datasets were cleaned and transformed to further our understanding on Airbnb rates.  Different regression models like Random Forest, Light Gradient Boosting Machine (LGBM), K-Nearest Neighbour (KNN) and Facebook (FB) Prophet were used in Google Colab to determine how seasonality, clustering and features impact the listings prices.  After a thorough analysis, an interactive dashboard on Tableau has been created for users to give an accurate estimate on their listing based on location, time, and size. 
+For this project, we have continued to explore further in New York City's Airbnb pricing.  To ensure that Airbnb listings are fairly priced for both the hosts and the visitors. We hope to do this by the increasing transparency of the process to discover which features of a listing are most correlated with price.  New and existing datasets were cleaned and transformed to conduct our pricing analysis.  Different regression models like Random Forest, Light Gradient Boosting Machine (LGBM), K-Nearest Neighbour (KNN) and Facebook (FB) Prophet were used in Google Colab to determine how seasonality, clustering and features impact the listings prices.  Based on the model results, an interactive dashboard on Tableau has been created for users to give an accurate estimate on their listing based on location, time, and size. 
 
 
 ## Questions
@@ -21,6 +21,20 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 ## Requirements
 
+* Obtain historical rates and holiday dates from the Inside Airbnb and US Holidays website.
+* Using the historical rates, create dataframes for monthly and day of week rates in Pandas.
+* Load the new tables to the existing PostgreSQL database.
+* Impute, encode and vectorize listings dataset to run RF, LGBM & KNN models.
+* Create a price correlation matrix, features importance and neighbourhood scores for further analysis.
+* Transform dataset with the dates, features and price to run the Prophet model.
+* Create a trend and seasonlity graphs for the prices.
+* Create a dataset for the predicted and actual prices.
+* Upload the actual-predicted dataset to PostgreSQL.
+* Connect Datbase to Tableau.
+* Create interactive dashboards.
+* Publish dashboards on Tableau public.
+
+
 ## Scripts
 
 ## Model Analysis
@@ -33,8 +47,8 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 **Amaris Hassan** - Data Research Specialist and Presenter<br>
 **Caitlan Beachey** - Tableau Specialist<br>
-**Cecilia Leung** - Machine Learning Model Specialist and Presenter<br>
-**Hillary Mandich** - ETL Specialist and Tableau Consultant<br>
+**Cecilia Leung** - Model Developer and Presenter<br>
+**Hillary Mandich** - Project Coordinator and Tableau Consultant<br>
 **Kapil Kundhir** - Tableau & ETL Specialist
 
 
