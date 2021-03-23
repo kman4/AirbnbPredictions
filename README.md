@@ -25,8 +25,14 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 * Using the historical rates, create dataframes for monthly and day of week rates in Pandas.
 * Load the new tables to the existing PostgreSQL database.
 * Impute, encode and vectorize listings dataset to run RF, LGBM & KNN models.
-* Transform dataset to date, group and price to run the prophet model.
-* 
+* Create a price correlation matrix, features importance and neighbourhood scores for further analysis.
+* Transform dataset with the dates, features and price to run the Prophet model.
+* Create a trend and seasonlity graphs for the prices.
+* Create a dataset for the predicted and actual prices.
+* Upload the actual-predicted dataset to PostgreSQL.
+* Connect Datbase to Tableau.
+* Create interactive dashboards.
+* Publish dashboards on Tableau public.
 
 
 ## Scripts
