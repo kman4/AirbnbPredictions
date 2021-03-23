@@ -30,12 +30,15 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 * Create a trend and seasonlity graphs for the prices.
 * Create a dataset for the predicted and actual prices.
 * Upload the actual-predicted dataset to PostgreSQL.
-* Connect Datbase to Tableau.
+* Connect Database to Tableau.
 * Create interactive dashboards.
 * Publish dashboards on Tableau public.
 
 
 ## Scripts
+[Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)
+[Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)
+[Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
 
 ## Model Analysis
 
