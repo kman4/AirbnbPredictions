@@ -46,9 +46,9 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 ## Team Members
 
 **Amaris Hassan** - Data Research Specialist and Presenter<br>
-**Caitlan Beachey** - Tableau Specialist<br>
-**Cecilia Leung** - Model Developer and Presenter<br>
-**Hillary Mandich** - Project Coordinator and Tableau Consultant<br>
-**Kapil Kundhir** - Tableau & ETL Specialist
+**Caitlan Beachey** - Tableau Specialist <br>
+**Cecilia Leung** - Model Developer and Presenter <br>
+**Hillary Mandich** - Project Coordinator <br>
+**Kapil Kundhir** - Tableau & Web Quality Assurance
 
 
