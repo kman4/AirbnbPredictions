@@ -4,6 +4,7 @@
 <workbook source-build='2020.3.6 (20203.21.0216.1504)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DashboardGridOverlay />
     <Heatmap />
     <IntuitiveSorting />
     <IntuitiveSorting_SP2 />
@@ -17593,26 +17594,14 @@
             <format attr='geo-area-type' value='State' />
           </style-rule>
           <style-rule element='quick-filter'>
-            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' value='Price per Night'>
-              <formatted-text>
-                <run fontname='Airbnb Cereal App'>Price per Night</run>
-              </formatted-text>
-            </format>
-            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' value='Select Borough:'>
-              <formatted-text>
-                <run fontname='Airbnb Cereal App'>Select Borough:</run>
-              </formatted-text>
-            </format>
-            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' value='Room Type'>
-              <formatted-text>
-                <run fontname='Airbnb Cereal App'>Room Type</run>
-              </formatted-text>
-            </format>
-            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[cnt:bedrooms:qk]' value='# of Bedrooms'>
-              <formatted-text>
-                <run fontname='Airbnb Cereal App'># of Bedrooms</run>
-              </formatted-text>
-            </format>
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' value='Price per Night' />
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' value='Select Borough:' />
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' value='Room Type' />
+            <format attr='title' field='[federated.0zege921w4sea8195je130wvgrw5].[cnt:bedrooms:qk]' value='# of Bedrooms' />
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Airbnb Cereal App' />
           </style-rule>
         </style>
         <panes>
@@ -18647,7 +18636,9 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
         <column-instance column='[bedrooms]' derivation='Count' name='[cnt:bedrooms:qk]' pivot='key' type='quantitative' />
         <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
+        <column-instance column='[review_scores_rating]' derivation='None' name='[none:review_scores_rating:qk]' pivot='key' type='quantitative' />
         <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+        <column caption='Review Scores Rating' datatype='integer' name='[review_scores_rating]' role='measure' type='quantitative' />
         <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
       </datasource-dependencies>
       <zones>
@@ -18680,19 +18671,20 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
         <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='281' h='15250' id='32' is-fixed='true' name='Map' pane-specification-id='0' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' w='13700' x='3200' y='78875' />
         <zone h='8750' id='35' name='No of Boroughs' show-title='false' w='21900' x='76300' y='8000' />
         <zone h='24625' id='36' name='Yearly Average Rate' w='47700' x='51200' y='17750' />
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6750' id='43' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' show-morefewerbutton='true' show-null-ctrls='false' values='all' w='23700' x='74600' y='66875' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6750' id='43' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:price:qk]' show-morefewerbutton='true' show-null-ctrls='false' values='all' w='23700' x='74500' y='64625' />
         <zone h='8750' id='14' name='Host Listing Count' show-title='false' w='25200' x='200' y='7750' />
         <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='4000' id='61' is-centered='0' is-scaled='1' param='C:/Users/caitl/OneDrive/Pictures/11_Airbnb_logo_logos-512.png' w='2600' x='50500' y='9375' />
         <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='3625' id='64' is-centered='0' is-scaled='1' param='C:/Users/caitl/OneDrive/Pictures/11_Airbnb_logo_logos-512.png' w='2500' x='22400' y='9375' />
         <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='3750' id='65' is-centered='0' is-scaled='1' param='C:/Users/caitl/OneDrive/Pictures/11_Airbnb_logo_logos-512.png' w='2600' x='74800' y='9500' />
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6750' id='70' mode='checkdropdown' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' values='database' w='17500' x='76600' y='56875' />
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7125' id='72' mode='checkdropdown' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' show-apply='true' values='database' w='17900' x='75900' y='48500' />
-        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7375' id='74' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[cnt:bedrooms:qk]' values='database' w='23900' x='74500' y='75375' />
-        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='5000' id='77' w='20200' x='75900' y='43625'>
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6750' id='70' mode='checkdropdown' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[attr:room_type:nk]' values='database' w='18000' x='76700' y='56875' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7125' id='72' mode='checkdropdown' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[none:borough:nk]' show-apply='true' values='database' w='17900' x='76800' y='49625' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7375' id='74' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[cnt:bedrooms:qk]' values='database' w='23900' x='74500' y='74125' />
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='5000' id='77' w='20200' x='78100' y='44000'>
           <formatted-text>
             <run fontcolor='#ff5a5f' fontname='Airbnb Cereal App Light' fontsize='11'>AirBnb Listing Filters</run>
           </formatted-text>
         </zone>
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7500' id='78' name='Map' param='[federated.0zege921w4sea8195je130wvgrw5].[none:review_scores_rating:qk]' values='database' w='16000' x='73100' y='42750' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -19709,7 +19701,8 @@ Super Host:     <[federated.0zege921w4sea8195je130wvgrw5].[attr:superhost:nk]>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='70' />
+      <active id='27' />
+      <grid grid-overlay-mode='on' />
       <simple-id uuid='{5FB1FB2A-1BAF-43C2-944A-B6A5BD6AEFE3}' />
     </window>
     <window class='dashboard' name='Top Review Score' tab-color='#f66273'>
