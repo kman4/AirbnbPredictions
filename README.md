@@ -4,7 +4,7 @@
 
 ## Background
 
-To ensure that Airbnb listings are fairly priced for both the hosts and the visitors. We hope to do this by the increasing transparency of the process to discover which features of a listing are most correlated with price.  Various new and existing datasets were cleaned and transformed to further our understanding on Airbnb rates.  Different regression models like Random Forest, Light Gradient Boosting Machine (LGBM), K-Nearest Neighbour (KNN) and Facebook (FB) Prophet were used in Google Colab to determine how seasonality, clustering and features impact the listings prices.  After a thorough analysis, an interactive dashboard on Tableau has been created for users to give an accurate estimate on their listing based on location, time, and size. 
+To ensure that Airbnb listings are fairly priced for both the hosts and the visitors. We hope to do this by the increasing transparency of the process to discover which features of a listing are most correlated with price.  Various new and existing datasets were cleaned and transformed to conduct our pricing analysis.  Different regression models like Random Forest, Light Gradient Boosting Machine (LGBM), K-Nearest Neighbour (KNN) and Facebook (FB) Prophet were used in Google Colab to determine how seasonality, clustering and features impact the listings prices.  Based on the model results, an interactive dashboard on Tableau has been created for users to give an accurate estimate on their listing based on location, time, and size. 
 
 
 ## Questions
