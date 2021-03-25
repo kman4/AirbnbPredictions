@@ -53,6 +53,7 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 * [Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
 >
 </details>
+
 ## Model Analysis
 
 ## Results
