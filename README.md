@@ -87,7 +87,7 @@ Both models show that the most important features that impact the listings price
 
 Since we saw that neighbourhood being an important feature from the Random Forest and LGBM Regressor model, we wanted to see how effective it is to price an Airbnb depending on what your neighbours charge.  As per the graph above, the training and testing scores are quite low.  This maybe due to the fact that there are different room types within the same area.  For example, a hotel room and a shared room can be listed on the same street where the price difference can be at least $200.
 
-![Image}(https://github.com/kman4/AirbnbPredictions/blob/main/Images/FB%20Prophet/Price_Predict_Overall.png)
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/FB%20Prophet/Price_Predict_Overall.png)
 
 Overall trends show that:
 * There are high and low seasons during different times of the year. 
