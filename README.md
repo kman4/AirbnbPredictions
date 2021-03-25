@@ -19,6 +19,14 @@ For this project, we have continued to explore further in New York City's Airbnb
 Get the Data - Inside Airbnb - [http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html)<br>
 US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate.com/holidays/us/), [https://www.kaggle.com/benjaminhendler/usholidays](https://www.kaggle.com/benjaminhendler/usholidays)
 
+## Technology and Tools 
+1. Data Transformation - Pandas
+2. Database - PostgreSQL
+3. Models - SciKit Learn
+4. Model Visuals - Matplotlib/Seaborn
+5. Dashboard - Tableau Desktop & Public
+
+
 ## Requirements
 
 * Obtain historical rates and holiday dates from the Inside Airbnb and US Holidays website.
@@ -36,15 +44,22 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 
 ## Scripts
-[Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
-[Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)<br>
-[Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
+
+<details>
+ <summary><b>Models</b></summary><br>
+
+* [Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
+* [Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)<br>
+* [Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
+>
+</details>
+
+## Dashboard
+[Tableau Dashboard Link](https://public.tableau.com/profile/kapil.pundhir#!/vizhome/AirBnb_Dashboard/AirBnbAnalysis?publish=yes)
 
 ## Model Analysis
 
 ## Results
-
-## Dashboard
 
 ## Team Members
 
