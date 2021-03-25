@@ -68,7 +68,11 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 ## Model Analysis
 
-## Results
+**Price Correlation - Accommodations and Amenities**
+
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Regressor/price_correlation.png)
+
+The correlation heatmap shows that accommodation features have more impact on price than amenities.  This implies that people feel room size, number of bedrooms and bathrooms are more important features to look at when booking an Airbnb.  Amenities features have a lower correlation meaning that they are nice items to have but it is not a basic requirement to have in an Airbnb.
 
 ## Team Members
 
