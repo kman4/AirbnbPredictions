@@ -45,12 +45,11 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 ## Scripts
 
-<details>
- <summary><b>Models</b></summary>
-[Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
-[Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)<br>
-[Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
-</details>
+**Models**
+* [Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
+* [Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)<br>
+* [Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
+>
 
 ## Model Analysis
 
