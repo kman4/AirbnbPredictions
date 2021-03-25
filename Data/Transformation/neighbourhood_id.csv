@@ -1,0 +1,231 @@
+neighbourhood_id,neighbourhood,borough_id
+1,Allerton,1
+2,Baychester,1
+3,Belmont,1
+4,Bronxdale,1
+5,Castle Hill,1
+6,City Island,1
+7,Claremont Village,1
+8,Clason Point,1
+9,Concourse,1
+10,Concourse Village,1
+11,Co-op City,1
+12,Country Club,1
+13,Eastchester,1
+14,East Morrisania,1
+15,Edenwald,1
+16,Fieldston,1
+17,Fordham,1
+18,Highbridge,1
+19,Hunts Point,1
+20,Kingsbridge,1
+21,Longwood,1
+22,Melrose,1
+23,Morrisania,1
+24,Morris Heights,1
+25,Morris Park,1
+26,Mott Haven,1
+27,Mount Eden,1
+28,Mount Hope,1
+29,North Riverdale,1
+30,Norwood,1
+31,Olinville,1
+32,Parkchester,1
+33,Pelham Bay,1
+34,Pelham Gardens,1
+35,Port Morris,1
+36,Riverdale,1
+37,Schuylerville,1
+38,Soundview,1
+39,Spuyten Duyvil,1
+40,Throgs Neck,1
+41,Tremont,1
+42,Unionport,1
+43,University Heights,1
+44,Van Nest,1
+45,Wakefield,1
+46,Westchester Square,1
+47,West Farms,1
+48,Williamsbridge,1
+49,Woodlawn,1
+50,Bath Beach,2
+51,Bay Ridge,2
+52,Bedford-Stuyvesant,2
+53,Bensonhurst,2
+54,Bergen Beach,2
+55,Boerum Hill,2
+56,Borough Park,2
+57,Brighton Beach,2
+58,Brooklyn Heights,2
+59,Brownsville,2
+60,Bushwick,2
+61,Canarsie,2
+62,Carroll Gardens,2
+63,Clinton Hill,2
+64,Cobble Hill,2
+65,Columbia St,2
+66,Coney Island,2
+67,Crown Heights,2
+68,Cypress Hills,2
+69,Downtown Brooklyn,2
+70,DUMBO,2
+71,Dyker Heights,2
+72,East Flatbush,2
+73,East New York,2
+74,Flatbush,2
+75,Flatlands,2
+76,Fort Greene,2
+77,Fort Hamilton,2
+78,Gerritsen Beach,2
+79,Gowanus,2
+80,Gravesend,2
+81,Greenpoint,2
+82,Kensington,2
+83,Manhattan Beach,2
+84,Midwood,2
+85,Mill Basin,2
+86,Navy Yard,2
+87,Park Slope,2
+88,Prospect Heights,2
+89,Prospect-Lefferts Gardens,2
+90,Red Hook,2
+91,Sea Gate,2
+92,Sheepshead Bay,2
+93,South Slope,2
+94,Sunset Park,2
+95,Vinegar Hill,2
+96,Williamsburg,2
+97,Windsor Terrace,2
+98,Battery Park City,3
+99,Chelsea,3
+100,Chinatown,3
+101,Civic Center,3
+102,East Harlem,3
+103,East Village,3
+104,Financial District,3
+105,Flatiron District,3
+106,Gramercy,3
+107,Greenwich Village,3
+108,Harlem,3
+109,Hell's Kitchen,3
+110,Inwood,3
+111,Kips Bay,3
+112,Little Italy,3
+113,Lower East Side,3
+114,Marble Hill,3
+115,Midtown,3
+116,Morningside Heights,3
+117,Murray Hill,3
+118,NoHo,3
+119,Nolita,3
+120,Roosevelt Island,3
+121,SoHo,3
+122,Stuyvesant Town,3
+123,Theater District,3
+124,Tribeca,3
+125,Two Bridges,3
+126,Upper East Side,3
+127,Upper West Side,3
+128,Washington Heights,3
+129,West Village,3
+130,Arverne,4
+131,Astoria,4
+132,Bayside,4
+133,Bayswater,4
+134,Bay Terrace,4
+135,Belle Harbor,4
+136,Bellerose,4
+137,Breezy Point,4
+138,Briarwood,4
+139,Cambria Heights,4
+140,College Point,4
+141,Corona,4
+142,Ditmars Steinway,4
+143,Douglaston,4
+144,East Elmhurst,4
+145,Edgemere,4
+146,Elmhurst,4
+147,Far Rockaway,4
+148,Flushing,4
+149,Forest Hills,4
+150,Fresh Meadows,4
+151,Glendale,4
+152,Glen Oaks,4
+153,Hollis,4
+154,Hollis Hills,4
+155,Holliswood,4
+156,Howard Beach,4
+157,Jackson Heights,4
+158,Jamaica,4
+159,Jamaica Estates,4
+160,Jamaica Hills,4
+161,Kew Gardens,4
+162,Kew Gardens Hills,4
+163,Laurelton,4
+164,Little Neck,4
+165,Long Island City,4
+166,Maspeth,4
+167,Middle Village,4
+168,Neponsit,4
+169,Ozone Park,4
+170,Queens Village,4
+171,Rego Park,4
+172,Richmond Hill,4
+173,Ridgewood,4
+174,Rockaway Beach,4
+175,Rosedale,4
+176,South Ozone Park,4
+177,Springfield Gardens,4
+178,St. Albans,4
+179,Sunnyside,4
+180,Whitestone,4
+181,Woodhaven,4
+182,Woodside,4
+183,Arden Heights,5
+184,Arrochar,5
+185,"Bay Terrace, Staten Island",5
+186,Bloomfield,5
+187,Bull's Head,5
+188,Castleton Corners,5
+189,Charleston,5
+190,"Chelsea, Staten Island",5
+191,Clifton,5
+192,Concord,5
+193,Dongan Hills,5
+194,Eltingville,5
+195,Emerson Hill,5
+196,Fort Wadsworth,5
+197,Graniteville,5
+198,Grant City,5
+199,Great Kills,5
+200,Grymes Hill,5
+201,Howland Hook,5
+202,Huguenot,5
+203,Lighthouse Hill,5
+204,Mariners Harbor,5
+205,Midland Beach,5
+206,New Brighton,5
+207,New Dorp,5
+208,New Dorp Beach,5
+209,New Springville,5
+210,Oakwood,5
+211,Pleasant Plains,5
+212,Port Ivory,5
+213,Port Richmond,5
+214,Prince's Bay,5
+215,Randall Manor,5
+216,Richmondtown,5
+217,Rosebank,5
+218,Rossville,5
+219,Shore Acres,5
+220,Silver Lake,5
+221,South Beach,5
+222,Stapleton,5
+223,St. George,5
+224,Todt Hill,5
+225,Tompkinsville,5
+226,Tottenville,5
+227,West Brighton,5
+228,Westerleigh,5
+229,Willowbrook,5
+230,Woodrow,5
