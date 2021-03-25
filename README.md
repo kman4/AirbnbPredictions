@@ -46,6 +46,15 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 ## Scripts
 
 <details>
+ <summary><b>Data Transformation</b></summary><br>
+
+* [Historical Rates 2017-2021(Seperate)](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Data%20Transformation/Data%20Cleaning%20-%20Rates%202017-2021%20calendar.ipynb)<br>
+* [Historical Rates 2017-2021(Joined)](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Data%20Transformation/Data%20Transformation%20-%20Prophet%20Model.ipynb)<br>
+* [Calendar Rates - Monthly & Weekly](https://github.com/kman4/AirbnbPredictions/blob/main/actualApp/data/Transformation/calendar_rates.ipynb)<br>
+* [FB Prophet DB - Overall](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Data%20Transformation/Data%20Transformation%20-%20Prophet%20Overall.ipynb)>
+</details>
+
+<details>
  <summary><b>Models</b></summary><br>
 
 * [Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
