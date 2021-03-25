@@ -52,6 +52,6 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 **Caitlan Beachey** - Tableau Specialist <br>
 **Cecilia Leung** - Model Developer and Presenter <br>
 **Hillary Mandich** - Project Coordinator <br>
-**Kapil Kundhir** - Tableau Specialist & Web Quality Assurance
+**Kapil Pundhir** - Tableau Specialist & Web Quality Assurance
 
 
