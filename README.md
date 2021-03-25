@@ -97,7 +97,13 @@ Overall trends show that:
 * Then in 2020, prices starts decreasing possibly because people travel less during Covid-19.
 * From 2022, it shows a slight upward trend as things may improve after the pandemic and people feel safe to travel again.
 
+**Time Components**
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/FB%20Prophet/Price_Predict_Components.png)
 
+The prophet model outputs different time components by holiday, day of week and month.  
+* On the holiday chart, it shows Christmas, New Years and long weekends have the highest impact on rates as people then do go on vacations with more days off from work.
+* With that being said, the weekly chart indicates the highest rates fall on Fri and Saturday.
+* Finally, it shows that the rates do change during different times of the year.  Summer rates are predominantly higher because of better weather and having summer holidays from school.
 
 
 ## Team Members
