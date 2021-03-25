@@ -108,8 +108,9 @@ The prophet model outputs different time components by holiday, day of week and 
 **Results**
 
 * The model predicted that there will be a slight upward trend starting from 2022.
-* The centrally located like Manhattan and Brooklyn will have one of the higher rates because it is close to the transit system, main attractions, and the business centers.  However, the host should not just price their based on this.  
-* Hosts should compare their neighbouring listings based on size instead of just taking the whole average because a hotel room vs a private room can have a huge price range.  * * Also offering different prices during holidays, summer, and long weekends can help the host make the most out of their Airbnb income.  
+* The centrally located like Manhattan and Brooklyn will have one of the higher rates because it is close to the transit system, main attractions, and the business centers.  
+* Hosts should compare their neighbouring listings based on size instead of just taking the whole average because a hotel room vs a private room can have a huge price range.  
+* Also offering different prices during holidays, summer, and long weekends can help the host make the most out of their Airbnb income.  
 * Having more bathrooms and bedrooms will incrase the price.  
 * Offering more amenities like a washer, heat and A/c provides only have a little impact to pricing. 
 * Even though the probability is low, but events like the pandemic & 911 will have a major impact on the whole economy and the demand to travel will decrease.
