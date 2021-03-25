@@ -105,7 +105,7 @@ The prophet model outputs different time components by holiday, day of week and 
 * With that being said, the weekly chart indicates the highest rates fall on Fri and Saturday.
 * Finally, it shows that the rates do change during different times of the year.  Summer rates are predominantly higher because of better weather and having summer holidays from school.
 
-**Results**
+## Results
 
 * The model predicted that there will be a slight upward trend starting from 2022.
 * The centrally located like Manhattan and Brooklyn will have one of the higher rates because it is close to the transit system, main attractions, and the business centers.  
