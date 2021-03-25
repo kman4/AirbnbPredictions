@@ -74,6 +74,15 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 The correlation heatmap shows that accommodation features have more impact on price than amenities.  This implies that people feel room size, number of bedrooms and bathrooms are more important features to look at when booking an Airbnb.  Amenities features have a lower correlation meaning that they are nice items to have but it is not a basic requirement to have in an Airbnb.
 
+**Features Importance**
+
+<p float="left">
+  <img src="https://github.com/kman4/AirbnbPredictions/blob/main/Images/Regressor/rf_feature_importance.png" width="400">
+  <img src="https://github.com/kman4/AirbnbPredictions/blob/main/Images/Regressor/lgbm_feature_importance.png" width="400"> 
+</p>
+
+Both models show that the most important features that impact the listings price include Room Type, Neighbourhood and Bathroorms.  Along with accomodations, having your listings in a reputable neighbourhood do have a positive impact on price.
+
 ## Team Members
 
 **Amaris Hassan** - Data Research Specialist and Presenter<br>
