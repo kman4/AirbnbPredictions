@@ -19,6 +19,14 @@ For this project, we have continued to explore further in New York City's Airbnb
 Get the Data - Inside Airbnb - [http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html)<br>
 US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate.com/holidays/us/), [https://www.kaggle.com/benjaminhendler/usholidays](https://www.kaggle.com/benjaminhendler/usholidays)
 
+## Technology and Tools 
+1. Data Transformation - Pandas
+2. Database - PostgreSQL
+3. Models - SciKit Learn
+4. Model Visuals - Matplotlib/Seaborn
+5. Dashboard - Tableau Desktop & Public
+
+
 ## Requirements
 
 * Obtain historical rates and holiday dates from the Inside Airbnb and US Holidays website.
