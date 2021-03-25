@@ -47,7 +47,7 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 
 <b>Data Transformation</b>br>
-* [Historical Rates 2017-2021(Seperate)](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%202017-2021%20Calendar%20Rates.ipynb)<br>
+* [Historical Rates 2017-2021](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%202017-2021%20Calendar%20Rates.ipynb)<br>
 * [Calendar Rates - Monthly & Weekly](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%202017-2021%20Calendar%20Rates.ipynb)<br>
 * [FB Prophet DB - Overall](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Data%20Transformation/Data%20Transformation%20-%20Prophet%20Overall.ipynb)
 * [FB Prophet DB - Borough & Neighbourhood](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%20Prophet%20Borough%20%26%20Neighbourhood.ipynb)
@@ -84,6 +84,20 @@ Both models show that the most important features that impact the listings price
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Regressor/knn.png)
 
 Since we saw that neighbourhood being an important feature from the Random Forest and LGBM Regressor model, we wanted to see how effective it is to price an Airbnb depending on what your neighbours charge.  As per the graph above, the training and testing scores are quite low.  This maybe due to the fact that there are different room types within the same area.  For example, a hotel room and a shared room can be listed on the same street where the price difference can be at least $200.
+
+**Trends and Seasonality**
+
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/FB%20Prophet/Price_Predict_Overall.png)
+
+Overall trends show that:
+* There are high and low seasons during different times of the year. 
+* Upper/lower limits increase overtime as there is more uncertainty in the future.
+* With the upward price trend, you can see that Airbnb popularity is on the rise.
+* Then in 2020, prices starts decreasing possibly because people travel less during Covid-19.
+* From 2022, it shows a slight upward trend as things may improve after the pandemic and people feel safe to travel again.
+
+**Timing Impacts**
+
 
 
 ## Team Members
