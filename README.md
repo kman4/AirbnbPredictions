@@ -95,7 +95,7 @@ Overall trends show that:
 * Upper/lower limits increase overtime as there is more uncertainty in the future.
 * With the upward price trend, you can see that Airbnb popularity is on the rise.
 * Then in 2020, prices starts decreasing possibly because people travel less during Covid-19.
-* From 2022, it shows a slight upward trend as things may improve after the pandemic and people feel safe to travel again.
+* From 2022, it shows a slight upward trend as things may improve after the pandemic and people feel safe to travel again.<br>
 
 **Time Components**
 ![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/FB%20Prophet/Price_Predict_Components.png)
@@ -104,6 +104,15 @@ The prophet model outputs different time components by holiday, day of week and 
 * On the holiday chart, it shows Christmas, New Years and long weekends have the highest impact on rates as people then do go on vacations with more days off from work.
 * With that being said, the weekly chart indicates the highest rates fall on Fri and Saturday.
 * Finally, it shows that the rates do change during different times of the year.  Summer rates are predominantly higher because of better weather and having summer holidays from school.
+
+**Results**
+
+* The model predicted that there will be a slight upward trend starting from 2022.
+* The centrally located like Manhattan and Brooklyn will have one of the higher rates because it is close to the transit system, main attractions, and the business centers.  However, the host should not just price their based on this.  
+* Hosts should compare their neighbouring listings based on size instead of just taking the whole average because a hotel room vs a private room can have a huge price range.  * * Also offering different prices during holidays, summer, and long weekends can help the host make the most out of their Airbnb income.  
+* Having more bathrooms and bedrooms will incrase the price.  
+* Offering more amenities like a washer, heat and A/c provides only have a little impact to pricing. 
+* Even though the probability is low, but events like the pandemic & 911 will have a major impact on the whole economy and the demand to travel will decrease.
 
 
 ## Team Members
