@@ -45,6 +45,7 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 ## Results
 
 ## Dashboard
+[Tableau Dashboard Link](https://public.tableau.com/profile/kapil.pundhir#!/vizhome/AirBnb_Dashboard/AirBnbAnalysis?publish=yes)
 
 ## Team Members
 
