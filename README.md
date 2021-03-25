@@ -45,23 +45,19 @@ US Holidays - [https://www.timeanddate.com/holidays/us/](https://www.timeanddate
 
 ## Scripts
 
-<details>
- <summary><b>Data Transformation</b></summary><br>
 
+<b>Data Transformation</b>br>
 * [Historical Rates 2017-2021(Seperate)](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%202017-2021%20Calendar%20Rates.ipynb)<br>
 * [Calendar Rates - Monthly & Weekly](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%202017-2021%20Calendar%20Rates.ipynb)<br>
 * [FB Prophet DB - Overall](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Data%20Transformation/Data%20Transformation%20-%20Prophet%20Overall.ipynb)
 * [FB Prophet DB - Borough & Neighbourhood](https://github.com/kman4/AirbnbPredictions/blob/main/Data/Transformation/Data%20Transformation%20-%20Prophet%20Borough%20%26%20Neighbourhood.ipynb)
-</details>
 
-<details>
- <summary><b>Models</b></summary><br>
+
+<b>Models</b><br>
 
 * [Random Forest, LGBM, and KNN Regressors](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Regressor/RF_LGBM_KNN_Models.ipynb)<br>
 * [Facebook Prophet Trends & Seasonality](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20Overall/Prophet_Overall.ipynb)<br>
 * [Facebook Prophet Predictor by Borough & Room Type](https://github.com/kman4/AirbnbPredictions/blob/main/Model/Prophet/FB%20Prophet%20-%20Borough%20%26%20Room%20Type/Prophet_Borough%20%26%20Room%20Type.ipynb)
->
-</details>
 
 ## Dashboard
 [Tableau Dashboard Link](https://public.tableau.com/profile/kapil.pundhir#!/vizhome/AirBnb_Dashboard/AirBnbAnalysis?publish=yes)
@@ -82,6 +78,13 @@ The correlation heatmap shows that accommodation features have more impact on pr
 </p>
 
 Both models show that the most important features that impact the listings price include Room Type, Neighbourhood and Bathroorms.  Along with accomodations, having your listings in a reputable neighbourhood do have a positive impact on price.
+
+**Nearest Neighbours**
+
+![Image](https://github.com/kman4/AirbnbPredictions/blob/main/Images/Regressor/knn.png)
+
+Since we saw that neighbourhood being an important feature from the Random Forest and LGBM Regressor model, we wanted to see how effective it is to price an Airbnb depending on what your neighbours charge.  As per the graph above, the training and testing scores are quite low.  This maybe due to the fact that there are different room types within the same area.  For example, a hotel room and a shared room can be listed on the same street where the price difference can be at least $200.
+
 
 ## Team Members
 
