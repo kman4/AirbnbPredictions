@@ -122,6 +122,6 @@ The prophet model outputs different time components by holiday, day of week and 
 **Caitlan Beachey** - Tableau Specialist <br>
 **Cecilia Leung** - Model Developer and Presenter <br>
 **Hillary Mandich** - Project Coordinator <br>
-**Kapil Pundhir** - Tableau Specialist & Model developer <br>
+**Kapil Pundhir** - Tableau Specialist & Jr. Model Developer <br>
 
 
